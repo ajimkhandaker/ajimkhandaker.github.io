@@ -1,0 +1,829 @@
+<html lang="en">
+<head>
+<div class="container">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SQL | ajim</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+       <style>
+        .list{
+            color: blueviolet;
+        }
+        body{
+            font-size: 28px;
+            background: gold;
+    
+        }
+    h1{
+        color: purple;
+        font-size: 2.3rem;
+    }
+    li{
+        /* color: green; */
+        font-size: 1.5rem;
+    }
+    .ans{
+        font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+<nav>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="bio.html">bio</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="background.html">background</a>
+</li>
+  <li>
+  <a class="nav-item nav-link" href="contact.html"><i class="fas fa-id-card"></i> contact</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">testing</a>
+    <div class="dropdown-menu">
+      <a class="nav-link" href="https://github.com/ajimatwork/Selenium-Framework">selenium framework</a>
+        <a class="nav-link" href="https://github.com/ajimatwork/uftFrameWork">uft framework</a>
+        <a class="nav-link" href="sql.html">sql</a>
+    </div>
+  </li>
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">development</a>
+    <div class="dropdown-menu">
+    <a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML">html</a>  
+    <a class="nav-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS">css</a>
+    <a class= "nav-link" href="https://www.cssfontstack.com/">css-font</a>
+    <a class= "nav-link" href="https://fontawesome.com/">font-awesome</a>
+        <a class ="nav-link" href="https://getbootstrap.com/">bootstrape</a>
+    </div>
+  </li>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">sample-project</a>
+    <div class="dropdown-menu">
+      <a class="nav-link" href="colorGame.html">color-game</a>
+        <a class="nav-link" href="#">comming-soon</a>
+        <a class="nav-link" href="#">comming-soon</a>
+    </div>
+</nav>           
+    <h1>SQL Interview Preparation Guideline for Software Testing</h1>
+    <h3></h3>
+        <div>
+        <p>
+        <ol>
+            <li class="list">What is SQL stand for?</li>
+            <div class="ans">Structured query language. English like language. It’s communicated with database.</div>
+            <liclass="list">What is Database?</li>
+            <div class="ans">A database is a collection of Data or Information.
+                 Every database has at least one or more tables. 
+                 Each table has its own unique name and consists of columns and rows. 
+                 There are few kinds of database such as Oracle, Sybase, and DB2.
+            </div>
+            <li class="list">DECODE:</li>
+            <div class="ans">
+                    The DECODE function allows you to perform If-Then-Else logic in SQL without having to use PL/SQL.
+                    Ex: - DECODE (Job_id,	'IT_PROG', salary*1.10,
+                            2nd condition) increase_salary                    
+            </div>
+            <li class="list">5.	Sub-query:</li>
+            <div class="ans">A sub-query is a query within a query in Oracle; we can create sub-queries within our SQL statements.
+                 These sub queries can reside in the WHERE clause, the FROM clause, or the SELECT clause
+            </div>
+            <li class="list">What is DDL, DML, DCL and TCL?</li>
+            <div class="ans">
+                <ul>
+                    <li>DDL (data definition language) Create, Drop, Alter.</li>
+                    <li>DML (data manipulation language) Insert, Update, Delete.</li>
+                    <li>DCL (data control language) Grand, Revoke</li>
+                    <li>TCL (transaction control language) Commit, Rollback.</li>
+                </ul>
+            </div>
+            <div class="ans">
+                    A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN)
+            </div>
+            <li class="list">Difference between Delete, Drop, Truncate</li>
+            <div class="ans">
+                   <samp> Delete:</samp> 
+                   <ul>
+                        <li>Can delete selected rows or removes all rows simultaneously.</li>
+                        <li>Doesn’t release the storage space used by the table.</li>
+                        <li>Table structure is not deleted</li>    
+                        <li>If deleted, can rollback or undo the deleted rows.</li>
+                        <li>Delete is a DML statement.</li>
+                   </ul>                    
+            </div>
+            <div class="ans">
+                    <samp> Drop:</samp> 
+                    <ul>
+                         <li>Can’t delete selected rows but once drop table, all rows are deleted.</li>
+                         <li>Release the storage space used by the table.</li>
+                         <li>If dropped, can’t rollback or undo the deleted rows.</li>    
+                         <li>Table structure is deleted.</li>
+                         <li>Drop is a DDL statement.</li>
+                    </ul>                    
+             </div>
+             <div class="ans">
+                    <samp>Truncate:</samp> 
+                    <ul>
+                         <li>Cannot delete selected rows but once truncate table, all rows   are delete.</li>
+                         <li>Release the storage space used by the table.</li>
+                         <li>If truncated, can’t rollback or undo the deleted rows.</li>    
+                         <li>Table structure is not deleted.</li>
+                         <li>Truncate is a DDL statement.</li>
+                    </ul>                    
+             </div>
+             <div>
+
+             </div>
+            <li class="list">What is joining? Explain different types of Join?</li>
+             <ul>
+                 <li>A join is a query that combines rows from two or more Table or views.</li>
+                 <li>A join is used to query data from more than one table.</li>
+                 <li>A join condition is used, when data from more than one table is required. 
+                        Row in one table can be joined to rows in another table according to common values existing in corresponding columns that is usually primary and foreign key column.
+                 </li>
+                 <li>To join n tables together, you need a minimum (n-1) join conditions.</li>
+             </ul>
+            <div>
+               <li class="list">SELF JOIN:</li>
+                   SELF JOIN is a normal join which is used to join a table to itself. The SQL self-join can be done by using table aliases to treat one table like a different table and then join them together.
+            </div>
+            <div>
+                <li class="list"> Right outer join?</li>
+                All the information from right table and the information from left table which is matching with the right table.
+                Select last_name,department_name
+                From Employees Right Join Departments
+                ON Employees.department_id=Departments.department_id;
+            </div>
+            <div>
+                <li class="list">Left outer join?</li>
+                All the information from Left table and the information from Right table which is matching with the Left table.
+                Select last_name,department_name
+                From Employees Left Join Departments
+                ON Employees.department_id=Departments.department_id;
+            </div>
+            <div>
+                <li class="list">How we do backend testing?</li>
+                Firstly, I am front end tester. I need the access from database administrator to access the database for database testing. 
+                I often do the back end testing while I do the functional testing
+               For verifying my requirement I need to retrieve data from the database. 
+               So I write SQL query manually to retrieve data and analysis the data that meet my requirement or not.
+            </div>
+                <div>
+                    <li class="list">How you know you retrieve the correct data?</li>
+                    By matching with my requirement.
+                </div>
+                <div>
+                    <li class="list">What is RDBMS?</li>
+                    RDBMS is stand for Relational Database Management System. Organized data with the foreign key and primary key called RDBMS.
+                </div>
+                <div>
+                    <li class="list">Primary Key, Unique key, foreign key and Compound key.</li>
+                    <ul>
+                        <li>Primary key: Primary key uniquely identify a column. Can’t contain null value. Can’t contain null value. A table have only one Primary key.</li>
+                        <li>Unique Key: Allows Null value. Can’t be duplicate, it’s can contain  null value. A table can have more than one Unique key.</li>
+                        <li>Compound key:  Compound is a key that consists of two or more attributes that uniquely identify an entity occurrence.</li>
+                        <li>Foreign key: Foreign key is a relational key (it can be null) a primary key can be a foreign key in other table.</li>
+                    </ul>
+                </div>
+                <div>
+                    <li class="list">What is SCHEMA?</li>
+                    Schema a relations/ combinations/ association between tables.
+                </div>
+                <div>
+                    <li class="list">What are DDL, DML and DCL, what are statements of them, and what is deference between them?</li>
+                    Its stand for data definition (define) language. It’s used for modify and create the structure of database.
+                    DDL common statements is   CREATE, DROP, ALTER, RENAME and TRUNKATE (DRCAT)
+                    Its stand for Data manipulation (managing) Language. It is used to retrieve, store, modify, DELETE, INSERT and UPDATE data in database.
+                    Common data types of SQL char (fixed length), varchar2 (variable length), integer, boll lean, time, array.
+                </div>                
+                <div>
+                    <li class="list">EQUIJOIN / INNER JOIN</li>
+                    Joins two tables with common column in which each is usually the primary key.
+                SELECT TABLE1.COL1, TABLE2.COL2
+                FROM TABLE1, TABLE2 
+                WHERE TABLE1.Common Column=TABLE2.Common Column
+                </div>
+                <div>
+                    <li class="list">Inner join?</li>
+                Only matching information between tables.
+                Select last_name,department_name
+                From Employees INNER Join Department
+                ON Employees.department_id=Departments.department_id;
+                </div>
+                <div>
+                    <li class="list">Outer join?</li>
+                    Matching and non-matching (all) information between tables.
+                </div>
+                <div>
+                    <li class="list">What is UNION?</li>
+                        UNION select related information from two tables, much like the JOIN command. However, when using the UNION command all selected columns need to be of the same data type.
+                        SELECT E_Name FROM Employees_Norway
+                        UNION
+                        SELECT E_Name FROM Employees_USA
+                        In SQL the UNION clause combines the results of two SQL queries into a single table of all matching rows.
+                        NY 10, VA 6(3 common b/w 2 table)
+                    Union: 13 in one row
+                </div> 
+                <div>
+                    <li class="list">UNION ALL:</li>
+                    The UNION ALL command is equal to the UNION command, except that UNION ALL selects all values.
+                    SQL Statement 1
+                    UNION ALL
+                    SQL Statement 2
+                    
+                    NY 10, VA 6(3 common b/w 2 table)
+                    Union all: 16 
+                </div>
+                <div>
+                    <li class="list">Operators in SQL</li>
+                    Group by,
+                    Like, not like
+                    Having, not having
+                    Null [undefined but not zero], not null
+                    IN [where salary IN (7000,8000,10000)]
+                          Not in 
+                          Between [where salary between 7000 and 10000]
+                          OR  
+                          Order By [for sorting by default ASCE]
+                </div>
+                               
+                <div>
+                    <li class="list">Comparison Operator</li>
+                    +,=,/, -, <,>, >=, =<, <>/!=
+                </div>
+                <div>
+                    <li>Aggregate function</li>
+                    Max, min, sum, count, AVG, are Aggregate functions.
+                </div>
+                 <div>
+                     <li>DDL Stand for Data Definition Language (structured)</li>
+                     Create-Create Table ajim 
+                     Drop-Drop table ajim,Alter Table (tableName) drop column(columnName)
+                     Alter-Alter table ajim add/modify/drop column     
+                 </div>                
+                 <div>
+                     <li>DML stands for Data Manipulation Language.</li>
+                     Insert-Insert into ajim values (values1,values2…..);
+                     Update-Update TABLE NAME Set COLUMN NAME=”” where…… 
+                     Delete-Delete from TABLE NAME where …..     
+                 </div>
+                 <div>
+                     <li>clause</li>
+                Select- Specifies the column that’s will be displayed in result window. 
+                Where clause-identify specific row
+                Order By(ASCE/DESC)-sorted by specific column 
+                Group By- specifies the summarizing& arrangement of data
+                Having-used with group by to specify the criteria for the selection of the data in the final group
+                 </div>
+                 <div>
+                     <li></li>
+                     Rollback-for undo any change you made before Commit(permanent save).
+                     Distinct use for duplicate data [distinct use for find out the unique information]
+                     Distinct: Select Distinct(Mangaer_id) From Employees;
+                     View-virtual Table, we use for complex query, security reason, also perform aggregate function, play easily with database 
+                     RDBSM in the Market Oracle, MS SQL Server, IBM DB2, Siebel
+                     We use SQL Commands/Toad for retrieve data from oracle data base.
+                 </div>
+                 <div>
+                <li></li>
+                CREATE TABLE (table name)
+                INSERT INTO (table name)
+                UPDATE (table name)
+                ALTER TABLE (table name)
+                DELETE FROM (table name)
+                DROP (table name)
+                TRUNCATE
+            </div>
+            <div>
+            <li></li>
+                SQL Syntax
+                Statement	Syntax
+                AND / OR	SELECT column_name(s)
+                FROM table_name
+                WHERE condition
+                AND|OR condition
+            </div>
+            <div>
+            <li></li>
+                ALTER TABLE (add column)	ALTER TABLE table_name 
+                ADD column_name datatype
+                ALTER TABLE (drop column)	ALTER TABLE table_name 
+                DROP COLUMN column_name
+                AS (alias for column)	SELECT column_name AS column_alias
+                FROM table_name
+                AS (alias for table)	SELECT column_name
+                FROM table_name  AS table_alias
+                BETWEEN	SELECT column_name(s)
+                FROM table_name
+                WHERE column_name
+                BETWEEN value1 AND value2
+            </div>
+            <div>
+            <li></li>
+                CREATE DATABASE	CREATE DATABASE database_name
+            </div>
+            <div>
+            <li></li>
+                CREATE INDEX	CREATE INDEX index_name
+                ON table_name (column_name)
+                CREATE TABLE	CREATE TABLE table_name
+                (
+                column_name1 data_type,
+                column_name2 data_type,
+                .......
+                )
+            </div>
+            <div>
+                <ul>
+                <li></li>
+                CREATE UNIQUE INDEX	CREATE UNIQUE INDEX index_name
+                ON table_name (column_name)
+                <li></li>
+                CREATE VIEW	CREATE VIEW view_name AS
+                SELECT column_name
+                FROM table_name
+                WHERE condition
+                <li></li>
+                DELETE FROM	DELETE FROM table_name 
+                (Note: Deletes the entire table!!) 
+                or
+                DELETE FROM table_name
+                WHERE condition
+                <li></li>
+                DROP DATABASE	DROP DATABASE database_name
+                <li></li>
+                DROP INDEX	DROP INDEX table_name.index_name
+                <li></li>
+                DROP TABLE	DROP TABLE table_name
+                <li></li>
+                GROUP BY: SELECT column_name1,SUM(column_name2)
+                FROM table_name
+                GROUP BY column_name1
+                <li></li>
+                HAVING:	SELECT column_name1,SUM(column_name2)
+                FROM table_name
+                GROUP BY column_name1
+                HAVING SUM(column_name2) condition value
+                <li></li>
+                IN:	SELECT column_name
+                FROM table_name
+                WHERE column_name
+                IN (value1,value2,..)
+                <li></li>
+                INSERT INTO	INSERT INTO table_name
+                VALUES (value1, value2,....) 
+                <li></li>
+                LIKE: SELECT column_name
+                FROM table_name
+                WHERE column_name
+                LIKE pattern
+                <li></li>
+                ORDER BY:	SELECT column_nameFROM table_name
+                ORDER BY column_name [ASC|DESC]
+                <li></li>
+                SELECT :	SELECT *
+                FROM table_name
+                <li></li>
+                DISTINCT:	SELECT DISTINC(column_name)
+                FROM table_name
+                <li></li>
+                SELECT INTO
+                (used to create backup copies of tables):	SELECT column_name
+                INTO new_table_name
+                FROM original_table_name
+                <li></li>
+                TRUNCATE TABLE
+                (deletes only the data inside the table):	TRUNCATE TABLE table_name
+                <li></li>
+                UPDATE:	UPDATE table_name
+                <li></li>
+                SET column_name=new_value
+                WHERE column_name=some_value
+                WHERE	SELECT column_name
+                FROM table_name
+                WHERE condition
+                </ul>
+            </div>
+            <div>
+            <li></li>
+                All Types of Practice:
+                2nd highest salary
+                Select Max(Salary) from employees
+                Where salary <(Select max(salary) from employees) “”less than
+            </div>
+            <div>
+                2nd lowest salary
+                Select Min(Salary) from employees
+                Where Salary >(Select Min(Salary) from employees) “”greater than
+            </div>
+            <div>
+                Find out who earns the maximum salary(with name)
+                SELECT first_name, last_name, salary
+                FROM employees
+                WHERE salary= (SELECT MAX(salary) FROM employees);
+            </div>
+            <div>
+                Find out employees monthly & yearly Salary with commission.
+                SELECT first_name, last_name, salary+salary*NVL(commission_pct,0) Monthly_Salary, (salary+salary*NVL(commission_pct,0))*12 Yearly_Salary
+                FROM employees;
+            </div>
+            <div>
+                Write a query to display the last 10 records(After order by we can’t use where cluse,before we can&desc upper to lower).
+                 SELECT *
+                 FROM (SELECT *  FROM employees order by rownum DESC)
+                WHERE rownum<=10
+                 ORDER BY employee_id;
+            </div>
+            <div>
+
+                Find out Top 10 salaried employees.
+                SELECT first_name, last_name, salary
+                FROM (SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC)
+                WHERE rownum<=10;
+                select job_id,count(*) from employees
+                group by job_id
+            </div>
+            <div>
+                Find out LEAST 10 salaried employees.
+                select* from(select first_name,salary from employees order by salary desc) where rownum<11;
+            </div>
+            <div>
+                Display the number of Distinct Department in the Employee table
+                SELECT COUNT(DISTINCT(department_id))
+                FROM employees;
+            </div>
+            <div>
+                Display all the Distinct Departments in the Employee table
+                SELECT DISTINCT(department_id)
+                FROM employees
+                WHERE department_id IS NOT NULL
+            </div>
+            <div>
+                Create a view for employees Name and Phone Number from employees Table.
+                
+                CREATE VIEW employees_view
+                AS
+                SELECT first_name, last_name, phone_number
+                FROM employees;
+            </div>
+            <div>
+            Create and account with [your name] and assign all those privileges. 
+            SELECT * FROM employees
+            WHERE employee_id=111;
+            SELECT * FROM employees
+            WHERE first_name='Ismael';
+            SELECT * FROM employees
+            WHERE first_name LIKE 'P%';
+            SELECT salary, commission_pct FROM employees;
+            SELECT first_name, last_name, salary, commission_pct FROM         employees;
+            SELECT first_name,last_name, salary, commission_pct,   salary+salary*commission_pct FROM Employees;
+            SELECT first_name,last_name,salary,commission_pct, salary+salary*NVL(commission_pct,0) FROM employees;
+            SELECT first_name,last_name,salary,commission_pct, salary+salary*NVL(commission_pct,.1) FROM employees;
+            </div>
+            <div>
+                Group functions:
+                AVG, COUNT, SUM, MAX, MIN, STDDEV, VARRIANCE
+            </div>
+            <div>    
+                SELECT MAX(salary)
+                FROM employees
+                
+                SELECT first_name,last_name
+                FROM employees
+                WHERE salary=34560;
+                
+                Write a Query to retrieve employees Name, Salary, and Commission.
+                SELECT first_name, last_name, salary, commission_pct 
+                FROM employees;
+            </div>
+            <div>
+                Find out those Employees who have commission.
+                SELECT first_name, last_name, commission_pct
+                FROM employees
+                WHERE commission_pct IS NOT NULL
+            </div>
+            <div>
+                Find out those Employees who do not have commission.
+                SELECT first_name, last_name, commission_pct
+                FROM employees
+                WHERE commission_pct IS NULL
+            </div>
+            <div>
+                Write a Query to retrieve to display first 10 records from a table.
+                SELECT * 
+                FROM employees
+                WHERE rownum<11;
+                OR
+                SELECT * 
+                FROM employees
+                WHERE rownum<=10;
+            </div>
+            <div>
+                Find out row number 11 to 20 from of a table.
+                SELECT * FROM employees
+                WHERE rownum<=20
+                 MINUS
+                SELECT * FROM employees
+                WHERE rownum<=10;
+            </div>
+            <div>
+                Find out those employees who get more than average Salary.
+                SELECT first_name,last_name,salary
+                FROM employees
+                WHERE salary>(SELECT AVG(salary)
+                FROM employees)
+            </div>
+            <div>
+                Find out those employees who get the same salary as Peter Tucker
+                SELECT first_name,last_name,salary
+                FROM employees
+                WHERE UPPER(first_name)=’PETER’
+                AND UPPER(last_name)=’TUCKER’;
+                SELECT first_name,last_name,salary
+                FROM employees
+                WHERE salary=10000;
+                
+                SELECT first_name,last_name,salary
+                FROM employees
+                WHERE salary=(SELECT salary
+                FROM employees
+                WHERE UPPER(first_name)=’PETER’
+                AND UPPER(last_name)=’TUCKER’);
+            </div>
+            <div>
+                Find out the departments which have employees.
+                SELECT e.first_name,e.last_name, e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id;
+            </div>
+            <div>
+                Find out those employees who belong to any Department.
+                SELECT e.first_name,e.last_name, e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id;
+            </div>
+            <div>
+                Find out the departments which do not have employees.
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id(+)=d.department_id)
+                                             MINUS
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id);
+            </div>
+            <div>
+                Find out those employees who do not belong to any Department.
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id(+))
+                                          MINUS
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id);
+            </div>
+            <div>
+                Find out the departments which do not have employees AND find out those employees who do not belong to any Department.
+                ((SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id(+)=d.department_id)
+                                             MINUS
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id))
+                                           UNION
+                ((SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id(+))
+                                          MINUS
+                (SELECT e.first_name,e.last_name,e.department_id, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id=d.department_id))
+            </div>
+            <div>
+                Find out managers of the employees.
+                SELECT e.first_name employee_first_name, e.last_name employee_last_name, m.first_name manager_first_name, m.last_name manager_last_name
+                FROM employees e, employees m
+                WHERE m.employee_id=e.manager_id;
+                
+                SELECT e.first_name employee_first_name, e.last_name employee_last_name, m.first_name manager_first_name, m.last_name manager_last_name
+                FROM employees e, employees m
+                WHERE m.employee_id=e.manager_id
+                ORDER BY m.first_name;
+            </div>
+            <div>
+                Find out those managers who manage only one employee.
+                SELECT e.manager_id, COUNT(e.employee_id)
+                FROM employees e, employees m
+                WHERE m.employee_id=e.manager_id
+                GROUP BY e.manager_id
+                HAVING COUNT(e.manager_id)=1;
+            </div>
+            <div>
+                Find out employees average Salary
+                SELECT AVG(salary) 
+                FROM employees;
+                Find out employees average Salary within their Department
+                SELECT AVG(salary) 
+                FROM employees
+                GROUP BY department_id;
+                
+                SELECT department_id, AVG(salary) 
+                FROM employees
+                WHERE department_id IS NOT NULL
+                GROUP BY department_id;
+                
+                SELECT department_id, AVG(salary) 
+                FROM employees
+                WHERE department_id IS NOT NULL
+                GROUP BY department_id
+                ORDER BY department_id;
+                
+                SELECT department_id, AVG(salary) 
+                FROM employees
+                WHERE department_id IS NOT NULL
+                GROUP BY department_id
+                ORDER BY department_id ASC;
+                
+                SELECT department_id,AVG(salary) 
+                FROM employees
+                WHERE department_id IS NOT NULL
+                GROUP BY department_id
+                ORDER BY department_id DESC;
+            </div>
+            <div>
+                <li></li>
+                Find out employees average Salary greater than 10,000 within their Department
+                SELECT department_id, AVG(salary) 
+                FROM employees
+                WHERE department_id IS NOT NULL
+                GROUP BY department_id
+                HAVING AVG(salary)>1000
+                ORDER BY department_id DESC;
+            </div>
+            <div>
+                <li></li>
+                Write a SQL Query,
+                
+                                If’ job is IT_PROG, the Salary increases 10%
+                                If job is FI_ACCOUNT, the Salary increases 15%
+                                If job is ST_CLERK, the Salary increases 20%
+                                If job is SA_REP, the Salary increases 25%
+                                If job is AC_ACCOUNT, the Salary increases 30%
+                For all other roles, there is no increase Salary
+                SELECT first_name,last_name,job_id,salary,
+                DECODE(job_id,'IT_PROG',salary*1.10,
+                               'FI_ACCOUNT',salary*1.15,
+                                'ST_CLERK',salary*1.20,
+                                'SA_REP',salary*1.25,
+                                'AC_ACCOUNT',salary*1.30,salary)increased_salary
+                FROM employees
+                order by first_name
+            </div>
+            <div>
+                <li></li>
+                Display the salary of the employees whose job title are as follows:  'IT_PROG', 'FI_ACCOUNT', 'ST_CLERK','SA_REP', 'AC_ACCOUNT'.
+                SELECT first_name, last_name, job_id, salary
+                FROM employees
+                WHERE job_id IN ('IT_PROG','FI_ACCOUNT','ST_CLERK','SA_REP','AC_ACCOUNT');
+                Display those employees whose salary got increased. 
+                SELECT first_name, last_name, job_id,salary,
+                DECODE (job_id,	'IT_PROG',         salary*1.10,
+                                    'FI_ACCOUNT',  salary*1.15,
+                                    'ST_CLERK',      salary*1.20,
+                                    'SA_REP',           salary*1.25,
+                                    'AC_ACCOUNT', salary*1.30) increased_salary
+                FROM employees
+                WHERE job_id IN ('IT_PROG','FI_ACCOUNT','ST_CLERK','SA_REP','AC_ACCOUNT');
+            </div>
+            <div>
+                Create a Table with employees_your first name using Employee Table with all records
+                CREATE TABLE employees_abu 
+                AS
+                SELECT * FROM employees;
+                
+                Create a Table with employees_your last name using Employee Table with no records- CREATING AN EMPTY TABLE
+                CREATE TABLE employees_ajim 
+                AS
+                SELECT * FROM employees
+                WHERE 1=2;
+                Insert a row in that Table you created
+                
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (1000, 'Abu', 'ajim', 'abuajim@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 500);
+            </div>
+            <div>
+                Create a text file, put 5 records and execute it in the Command Line
+                1)	Open a Notepad
+                2)	Write the following lines in the Notepad:
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (556, 'Russo1', 'MMK', 'russo1@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 501);
+                
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (557, 'Russo2', 'MMK', 'russo2@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 502);
+                
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (558, 'Russo3', 'MMK', 'russo3@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 503);
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (559, 'Russo4', 'MMK', 'russo4@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 504);
+                
+                INSERT INTO employees_ajim (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
+                VALUES (560, 'Russo5', 'MMK', 'russo5@pnt.edu', '718-878-4709', '31-Jan-09', 'QA-TESTER', 90000, .5, 100, 505);
+                
+                3)	Save as sql_insert_file.txt in the c:/ drive.
+                4)	Run that file in SQL command line as @c:/SQL_insert_file.txt
+                5)	Use SELECT statement to confirm the entry in the table:
+            </div>
+            <div>
+                SELECT * FROM employees_ajim;
+                
+                Update a row with that Table you created
+                
+                UPDATE employee_ajim
+                SET phone_number='718-825-7140'
+                WHERE employee_id =1000;
+                
+                Delete a row from that Table you created
+                
+                DELETE FROM employees_ajim
+                WHERE employee_id=560;
+                Find out Employees Name, Salary, department_id. 
+                SELECT first_name, last_name, salary, department_id
+                FROM employees;
+                
+            </div>
+            <ul> 
+                <li></li>   
+                Find out Employees Name, Salary, and department name. 
+                SELECT employees.first_name, employees.last_name, employees.salary, departments.department_name
+                FROM employees, departments
+                WHERE employees.department_id= departments.department_id;
+                <li></li>
+                SELECT e.first_name, e.last_name, e.salary, d.department_name
+                FROM employees e, departments d
+                WHERE e.department_id= d.department_id;
+                <li></li>
+                Find out Employees Name, Salary, department name, City. 
+                SELECT e.first_name, e.last_name, e.salary, d.department_name, l.city
+                FROM employees e, departments d, locations l
+                WHERE e.department_id= d.department_id
+                 AND     d.location_id=l.location_id;
+                <li></li>
+                Find out Employees Name, Salary, department name, City, Country Name. 
+                SELECT e.first_name, e.last_name, e.salary, d.department_name, l.city, c.country_name
+                FROM employees e, departments d, locations l, countries c
+                WHERE e.department_id= d.department_id
+                 AND     d.location_id=l.location_id
+                 AND      l.country_id= c.country_id;
+                <li></li>
+                Find out Employees Name, Salary, department name, City, Country Name, Region name, Job Id, Job Title.
+                SELECT e.first_name, e.last_name, e.salary, d.department_name, l.city, c.country_name,r.region_name,jh.job_id,j.job_title
+                FROM employees e, departments d, locations l, countries c, regions r, job_history jh, jobs j
+                WHERE  e.department_id= d.department_id
+                AND       d.location_id= l.location_id
+                AND       l.country_id= c.country_id
+                AND       c.region_id=  r.region_id
+                AND       d.department_id= jh.department_id
+                AND       jh.job_id=j.job_id;
+                </ul>
+                DML-SELECT, INSERT, UPDATE, DELETE
+                DDL-DR CAT- DROP, RENAME, CREATE, ALTER,TRUNCATE
+                DCL-REVOKE, GRANT
+                DELETE, DROP, TRUNCATE
+                DELETE FROM employees_ajim1
+                WHERE employee_id=1000;
+                DROP TABLE employees_ajim2;
+                TRUNCATE TABLE employees_ajim3;
+                <li>Additional Practice:</li>
+                <ul>
+                    <li></li>
+                        Write a Function to calculate employees Income Tax where Income Tax is .8625%
+                    <li></li>
+                        Write an Insert Trigger for employees table
+                    <li></li>    
+                        Write an Update Trigger for employees table
+                    <li></li>    
+                        
+                        Write a Delete Trigger for employees table
+                    <li></li>  
+                        Write a procedure which raises employee's salary up to 10%   
+                    <li></li>    
+                        Find out those managers who manage the most employees
+                    <li></li>
+                        Find out those managers who manage the least employees
+             
+                </ul>
+            </ol>
+        </p>
+        </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
