@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<title>Reaction Timer Game</title>
+<style type="text/css">
+#shape {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  display: none;
+  position: relative;
+
+}
+</style>
+</head>
+<body>
+	<h1>Test Your Reactions!</h1>
+	<h2>Click on the Circles and Boxes as quickly as you can</h2>
+<p><h4 id="time-taken">You took 00 Second(s) to Click Me!</h4></p>
+<div id="shape"></div>
+<p id="smallest"></p>
+<script type="text/javascript">
+var startTime = new Date();
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function makeShapeAppear(){
+	var marginTop= Math.random()*400;
+	var marginLeft= Math.random()*400;
+	var width= (Math.random()*200+100);
+	if (Math.random() > .6) {
+		document.getElementById("shape").style.borderRadius="50%";
+	} else {
+		document.getElementById("shape").style.borderRadius="0";
+	}
+
+	document.getElementById("shape").style.backgroundColor= getRandomColor();
+	document.getElementById("shape").style.marginTop= marginTop+"px";
+	document.getElementById("shape").style.marginLeft= marginLeft+"px";
+	document.getElementById("shape").style.height= width+"px";
+	document.getElementById("shape").style.width= width+"px";
+
+	document.getElementById("shape").style.display= "block";
+	startTime= new Date().getTime();
+}
+
+function apearAfterDelay(){
+setTimeout(makeShapeAppear, Math.random()*2000);	
+}
+apearAfterDelay();
+document.getElementById("shape").onclick= function(){
+document.getElementById("shape").style.display="none";	
+var endTime = new Date();
+var timeDiff = (endTime - startTime)/1000; //in ms
+document.getElementById("time-taken").innerHTML= "<h4>You took " + timeDiff+ " Second(s) to Click Me!</h4>";
+apearAfterDelay();
+}
+
+function randomNumber() {
+  var x = document.getElementById("demo")
+  x.innerHTML = Math.floor((Math.random() * 100) + 1);
+}
+
+</script>
+
+</body>
+</html>
